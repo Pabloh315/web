@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educación y Certificaciones</title>
+    <style>
+        /* Estilo general */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f7f3;
+            scroll-behavior: smooth;
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #456B53;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+        }
+        .navbar a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+        .navbar a:hover {
+            color: #D3845C;
+        }
+        #menu-btn {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+        #menu-btn:hover {
+            transform: scale(1.1);
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                display: none;
+                flex-direction: column;
+                background-color: #456B53;
+            }
+            #menu-btn {
+                display: block;
+                position: fixed;
+                top: 15px;
+                right: 15px;
+            }
+        }
+
+        /* Sección principal */
+        .section-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1000px;
+            margin: 80px auto;
+            background-color: #EAF1EB;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease-in-out;
+        }
+        .section-container:hover {
+            transform: scale(1.02);
+        }
+        .section-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .section-image img:hover {
+            transform: scale(1.1);
+        }
+        .section-text {
+            max-width: 500px;
+            padding-left: 40px;
+        }
+        .section-text p {
+            color: #456B53;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .section-text strong {
+            color: #BF7145;
+        }
+
+        /* Estilo de botones */
+        .section-text button {
+            background-color: #D3845C;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .section-text button:hover {
+            background-color: #BF7145;
+            transform: scale(1.1);
+        }
+
+        /* Fotografía y créditos */
+        .photo-credit {
+            font-size: 14px;
+            font-style: italic;
+            color: #BF7145;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Botón de menú hamburguesa -->
+    <button id="menu-btn">☰</button>
+    <div class="navbar" id="navbar">
+        <a href="Portafolio.html">PRINCIPAL</a>
+        <a href="habilidades.html">HABILIDADES</a>
+        <a href="experiencia.html">EXPERIENCIA LABORAL</a>
+        <a href="educacion.html">EDUCACIÓN Y CERTIFICACIONES</a>
+        <a href="contacto.html">CONTACTO</a>
+    </div>
+
+    <section class="section-container">
+        <div class="section-image">
+            <img src="protafolio/icono-diploma-posgrado-vector-plano-estudio-examen-tesis-tapa-aislada_98396-57-removebg-preview.png" alt="Educación y Certificaciones">
+        </div>
+        <div class="section-text">
+            <p>• <strong>Dirección Estratégica en Ingeniería de Software (Cursando Actualmente)</strong><br>
+                Universidad Autónoma Gabriel René Moreno, desde Octubre 2019<br>
+                Santa Cruz de la Sierra, Santa Cruz, Bolivia</p>
+              
+            <p>• <strong>Educación superior y Tecnología (Diplomado)</strong><br>
+                Universidad Autónoma Gabriel René Moreno, desde Julio 2018<br>
+                Santa Cruz de la Sierra, Santa Cruz, Bolivia</p>
+              
+            <p>• <strong>Inglés (Técnico Avanzado)</strong><br>
+                Centro Boliviano Americano, desde Agosto 2013 hasta Noviembre 2015<br>
+                Santa Cruz de la Sierra, Santa Cruz, Bolivia</p>
+              
+            <p>• <strong>Ingeniería en Informática (Licenciatura)</strong><br>
+                Universidad Autónoma Gabriel René Moreno, desde Febrero 2008 hasta Marzo 2015<br>
+                Santa Cruz de la Sierra, Santa Cruz, Bolivia</p>
+              
+            <p>• <strong>Bachiller en Humanidades</strong><br>
+                Hernando Siles Reyes, desde Febrero 2003 hasta Noviembre 2007<br>
+                Santa Cruz de la Sierra, Santa Cruz, Bolivia</p>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript para mostrar/ocultar el menú
+        document.getElementById("menu-btn").addEventListener("click", function () {
+            let navbar = document.getElementById("navbar");
+            navbar.style.display = navbar.style.display === "flex" ? "none" : "flex";
+        });
+    </script>
+</body>
+</html>

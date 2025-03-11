@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilidades</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f7f3;
+            scroll-behavior: smooth;
+        }
+        .navbar {
+            background-color: #456B53;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+        }
+        .navbar a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .navbar a:hover {
+            color: #d9d9d9;
+            transform: scale(1.1);
+        }
+        #menu-btn {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+        #menu-btn:hover {
+            transform: rotate(90deg);
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                display: none;
+                flex-direction: column;
+                background-color: #456B53;
+                transition: display 0.5s ease;
+            }
+            #menu-btn {
+                display: block;
+                position: fixed;
+                top: 15px;
+                right: 15px;
+            }
+        }
+        .section-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1000px;
+            margin: 80px auto;
+            background-color: #EAF1EB;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section-container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        .section-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .section-image img:hover {
+            transform: scale(1.05);
+        }
+        .section-text {
+            max-width: 500px;
+            padding-left: 40px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Botón de menú hamburguesa -->
+    <button id="menu-btn">☰</button>
+    <div class="navbar" id="navbar">
+        <a href="Portafolio.html">PRINCIPAL</a>
+        <a href="habilidades.html">HABILIDADES</a>
+        <a href="experiencia.html">EXPERIENCIA LABORAL</a>
+        <a href="educacion.html">EDUCACIÓN Y CERTIFICACIONES</a>
+        <a href="contacto.html">CONTACTO</a>
+    </div>
+    <section id="work" class="section-container">
+        <div class="section-image">
+            <img src="protafolio/estudios-trabajar-en-informatica.jpg" alt="Work Image">
+        </div>
+        <div class="section-text">
+            <p><strong>Adan Condori Callisaya</strong> cuenta con experiencia en el desarrollo y diseño de interfaces web y móviles, 
+                enfocándose en la creación de experiencias de usuario intuitivas y eficientes.</p>
+                
+            <p>A lo largo de su trayectoria, ha trabajado en:</p>
+                
+            <ul>
+                <li>Diseño y mantenimiento de aplicaciones bancarias y empresariales.</li>
+                <li>Asegurar una navegación fluida y una óptima interacción con el usuario.</li>
+                <li>Desarrollo de interfaces modernas, adaptativas y funcionales para distintas plataformas.</li>
+            </ul>
+                
+            <p><strong>Tecnologías dominadas:</strong></p>
+            <ul>
+                <li>Vue.js</li>
+                <li>Ruby on Rails</li>
+                <li>Android Studio</li>
+                <li>iOS</li>
+            </ul>
+                
+            <p>Además, posee conocimientos en:</p>
+                
+            <ul>
+                <li><strong>Diseño responsive:</strong> asegurando que las aplicaciones se ajusten correctamente a diversos dispositivos y resoluciones de pantalla.</li>
+                <li><strong>Usabilidad y experiencia de usuario (UX):</strong> creación de soluciones atractivas y accesibles.</li>
+                <li><strong>Integración con APIs y notificaciones push:</strong> agregando funcionalidades que enriquecen la experiencia del usuario final.</li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript para mostrar/ocultar el menú
+        document.getElementById("menu-btn").addEventListener("click", function () {
+            let navbar = document.getElementById("navbar");
+            navbar.style.display = navbar.style.display === "flex" ? "none" : "flex";
+        });
+    </script>
+</body>
+</html>
+
